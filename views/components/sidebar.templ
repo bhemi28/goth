@@ -1,0 +1,17 @@
+package components
+
+templ Sidebar() {
+	<nav class="fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto md:w-24 w-full bg-desktop/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none shrink-0 flex md:flex-col flex-row items-center justify-center md:gap-4 z-50 pointer-events-none border-t-3 md:border-t-0 border-retro-black py-2 md:py-0">
+		<div class="pointer-events-auto bg-white/90 backdrop-blur border-3 border-retro-black shadow-hard p-2 md:p-3 rounded-xl flex md:flex-col flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
+			<a class="group relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 border-retro-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transition-all hover:bg-retro-blue btn-press" href="/" hx-get="/" hx-push-url="true" hx-target="#content" hx-swap="innerHTML" title="Home">
+				<span class="material-symbols-outlined text-2xl sm:text-2xl md:text-3xl text-retro-black group-hover:scale-110 transition-transform">home</span>
+			</a>
+			<a class="group relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 border-retro-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transition-all hover:bg-retro-pink btn-press" href="/posts" hx-get="/posts" hx-push-url="true" hx-target="#content" hx-swap="innerHTML" title="Blog">
+				<span class="material-symbols-outlined text-2xl sm:text-2xl md:text-3xl text-retro-black group-hover:scale-110 transition-transform">save</span>
+			</a>
+			<a class="group relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white border-2 border-retro-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transition-all hover:bg-retro-green btn-press" href="/contact" hx-get="/contact" hx-push-url="true" hx-target="#content" hx-swap="innerHTML" title="Contact">
+				<span class="material-symbols-outlined text-2xl sm:text-2xl md:text-3xl text-retro-black group-hover:scale-110 transition-transform">mail</span>
+			</a>
+		</div>
+	</nav>
+}

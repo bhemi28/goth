@@ -1,0 +1,26 @@
+.git
+.gitignore
+**/*.swp
+**/*.tmp
+**/*.log
+node_modules
+dist
+bin
+.tmp
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Docker files (no need to copy into build)
+Dockerfile
+docker-compose*.yml
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

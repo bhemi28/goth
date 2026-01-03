@@ -1,0 +1,425 @@
+.post-body {
+  line-height: 1.75;
+  font-size: 1rem;
+  color: #e5e7eb;
+  /* Tailwind's gray-200 */
+}
+
+.post-body h1 {
+  font-size: 2.5rem;
+  /* Larger than before */
+  font-weight: 800;
+  color: #f9fafb;
+  /* Lightest gray */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #374151;
+  /* Subtle underline */
+  letter-spacing: 0.02em;
+}
+
+.post-body h2 {
+  font-size: 2rem;
+  /* Larger than before */
+  font-weight: 700;
+  color: #f3f4f6;
+  /* Slightly darker than h1 */
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.post-body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.post-body p {
+  margin-bottom: 1.25rem;
+  color: #d1d5db;
+  /* Slightly lighter for body text */
+}
+
+.post-body a {
+  color: #93c5fd;
+  /* Tailwind's blue-300 */
+  text-decoration: underline;
+}
+
+.post-body ul,
+.post-body ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-body code {
+  background-color: #374151;
+  /* Tailwind's gray-700 */
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.post-body pre {
+  background-color: #111827;
+  /* Tailwind's gray-900 */
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+
+/* NEW CSS */
+
+.bg-dots {
+  background-image: radial-gradient(#cbd5e1 2px, transparent 2px);
+  background-size: 24px 24px;
+}
+
+/* Markdown Content Styles */
+.markdown-content {
+  line-height: 1.75;
+  font-size: 1rem;
+  color: #1f2937; /* Gray-800 for better readability on white */
+}
+
+.markdown-content h1 {
+  font-family: 'VT323', monospace;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #312e81; /* Retro Indigo */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #0f0f0f;
+  line-height: 1.1;
+}
+
+.markdown-content h2 {
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #0f0f0f;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px dashed #0f0f0f;
+  display: inline-block;
+}
+
+.markdown-content h3 {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0f0f0f;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  text-decoration-color: #ffade3;
+  text-decoration-thickness: 3px;
+}
+
+.markdown-content p {
+  margin-bottom: 1.25rem;
+  font-family: 'Space Mono', monospace;
+}
+
+.markdown-content a {
+  color: #312e81;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.markdown-content a:hover {
+  background-color: #fff59d; /* Retro Yellow */
+  color: #0f0f0f;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: square;
+}
+
+.markdown-content li::marker {
+  color: #ffade3; /* Retro Pink */
+}
+
+.markdown-content code {
+  background-color: #f3f4f6;
+  border: 1px solid #0f0f0f;
+  padding: 0.2em 0.4em;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9em;
+  color: #ec4899; /* Pink-600 */
+}
+
+.markdown-content pre {
+  background-color: #1e1e1e;
+  border: 3px solid #0f0f0f;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  box-shadow: 4px 4px 0px 0px #0f0f0f;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  border: none;
+  color: #e5e7eb;
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #ffade3;
+  padding-left: 1rem;
+  font-style: italic;
+  background-color: #fff1f2;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 16px;
+  background: #eef2ff;
+  border-left: 3px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffade3;
+  border: 3px solid #0f0f0f;
+  box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cbd5e1' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffade3 #eef2ff;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.sticker-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.sticker-float-delay {
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.btn-press:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #0f0f0f !important;
+}
+
+.btn-active {
+  background-color: #fff59d !important;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #0f0f0f !important;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 24px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid #0f0f0f;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 24px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid #ffffff;
+}
+
+@media (max-width: 768px) {
+  .speech-bubble::before {
+    left: 50%;
+    top: -14px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .speech-bubble::after {
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+
+/* Markdown Content Styles */
+.markdown-content {
+  font-family: 'Space Mono', monospace;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-family: 'VT323', monospace;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+}
+
+.markdown-content h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px dashed #0f0f0f;
+  padding-bottom: 0.2em;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+  color: #312e81;
+}
+
+.markdown-content h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-color: #ffade3;
+  text-decoration-thickness: 3px;
+}
+
+.markdown-content p {
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.markdown-content a {
+  color: #312e81;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, #ffade3 0%, #ffade3 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.3em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.markdown-content a:hover {
+  background-size: 100% 88%;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.markdown-content ul li {
+  list-style-type: square;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #0f0f0f;
+  background-color: #fff59d;
+  padding: 1em;
+  margin: 1.5em 0;
+  font-style: italic;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Code Blocks */
+.markdown-content pre {
+  background-color: #1e1b4b;
+  color: #e0e7ff;
+  padding: 1.5em;
+  border: 3px solid #0f0f0f;
+  box-shadow: 6px 6px 0px 0px #ffade3;
+  overflow-x: auto;
+  margin: 2em 0;
+  border-radius: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+.markdown-content code {
+  font-family: 'Space Mono', monospace;
+  background-color: #e0e7ff;
+  color: #312e81;
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+  font-size: 0.9em;
+  border: 1px solid #312e81;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: 0.95em;
+}
+
+.markdown-content img {
+  border: 3px solid #0f0f0f;
+  box-shadow: 6px 6px 0px 0px #0f0f0f;
+  margin: 2em auto;
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes spin-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-loader {
+  animation: spin-loader 1s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-loader 3s linear infinite;
+}
+
+/* Loading state for submit button - uses HTMX's built-in .htmx-request class */
+#submit-btn.htmx-request .btn-text,
+#submit-btn.htmx-request .btn-icon {
+  visibility: hidden;
+}
+
+#submit-btn.htmx-request .btn-loader {
+  display: flex !important;
+}
+
+#submit-btn.htmx-request {
+  pointer-events: none;
+  opacity: 0.7;
+}

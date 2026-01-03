@@ -1,0 +1,63 @@
+package views
+
+templ PostContent(meta Meta, content templ.Component) {
+	<main class="flex-1 flex flex-col min-h-0 bg-window border-3 border-retro-black shadow-hard max-w-6xl mx-auto w-full relative">
+		<header class="h-10 border-b-3 border-retro-black bg-retro-indigo flex items-center justify-between px-3 select-none">
+			<div class="flex items-center gap-2">
+				<div class="w-4 h-4 rounded-sm bg-retro-pink border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+				<div class="w-4 h-4 rounded-sm bg-retro-yellow border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+				<div class="w-4 h-4 rounded-sm bg-retro-green border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+			</div>
+			<div class="text-white font-heading text-xl tracking-wider uppercase">Notepad.exe - [{ meta.Title }]</div>
+			<div class="w-8"></div>
+		</header>
+		<div class="bg-gray-100 border-b-3 border-retro-black flex items-center px-2 py-1 gap-4 text-sm font-bold select-none text-retro-black">
+			<div class="px-2 hover:bg-retro-indigo hover:text-white cursor-pointer"><span class="underline decoration-2">F</span>ile</div>
+			<div class="px-2 hover:bg-retro-indigo hover:text-white cursor-pointer"><span class="underline decoration-2">E</span>dit</div>
+			<div class="px-2 hover:bg-retro-indigo hover:text-white cursor-pointer"><span class="underline decoration-2">F</span>ormat</div>
+			<div class="px-2 hover:bg-retro-indigo hover:text-white cursor-pointer"><span class="underline decoration-2">V</span>iew</div>
+			<div class="px-2 hover:bg-retro-indigo hover:text-white cursor-pointer"><span class="underline decoration-2">H</span>elp</div>
+		</div>
+		<div class="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6 md:p-12 bg-white relative">
+			<button hx-get="/posts" hx-push-url="/posts" hx-target="#content" hx-swap="innerHTML" class="mb-6 md:mb-10 px-3 sm:px-4 py-1.5 bg-gray-200 border-2 border-b-retro-black border-r-retro-black border-t-white border-l-white active:border-t-black active:border-l-black active:border-b-white active:border-r-white shadow-sm hover:bg-gray-300 font-bold flex items-center gap-2 font-sans text-xs sm:text-sm group transition-none">
+				<span class="material-symbols-outlined text-base sm:text-lg group-active:-translate-x-0.5">arrow_back</span>
+				<span class="group-active:translate-y-px">BACK TO ROOT</span>
+			</button>
+			<div class="relative mb-8 md:mb-12 border-b-2 border-dashed border-gray-300 pb-6 md:pb-8">
+				<div class="md:absolute md:-top-2 md:right-0 lg:right-10 w-full md:w-24 h-auto md:h-24 flex md:block items-center justify-start md:justify-center pointer-events-none select-none mb-4 md:mb-0">
+					<div class="border-4 border-retro-pink text-retro-pink p-2 font-heading text-xl font-bold uppercase -rotate-2 md:-rotate-12 opacity-80 shadow-sm bg-white/50 backdrop-blur-sm inline-block">
+						<div class="border-2 border-retro-pink border-dashed px-2 py-1 text-center leading-none">
+							POSTED<br/>
+							<span class="text-2xl">{ meta.Date }</span><br/>
+						</div>
+					</div>
+				</div>
+				<h1 class="font-hand text-3xl sm:text-5xl md:text-7xl mb-4 text-retro-indigo max-w-3xl leading-tight -rotate-1 break-words">
+					{ meta.Title }
+				</h1>
+				<div class="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-xs font-bold text-gray-500 mt-4">
+					<span class="material-symbols-outlined text-base">label</span>
+					<span>TAGS:</span>
+					<span class="bg-retro-yellow text-black border border-black px-1.5 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.2)]">#UI</span>
+					<span class="bg-retro-blue text-black border border-black px-1.5 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.2)]">#CSS</span>
+					<span class="bg-retro-green text-black border border-black px-1.5 py-0.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.2)]">#TUTORIAL</span>
+				</div>
+			</div>
+			<article class="prose prose-sm sm:prose-base prose-p:font-mono prose-headings:font-heading max-w-none text-retro-black markdown-content">
+				@content
+			</article>
+			<div class="flex flex-col sm:flex-row justify-between items-center border-t-2 border-retro-black pt-6 mt-12 text-sm text-gray-500 gap-4 sm:gap-0">
+				<div>End of file.</div>
+				<div class="flex gap-2">
+					<button class="px-3 py-1 bg-gray-200 border border-gray-400 hover:bg-white">Prev Post</button>
+					<button class="px-3 py-1 bg-gray-200 border border-gray-400 hover:bg-white">Next Post</button>
+				</div>
+			</div>
+		</div>
+		<footer class="h-8 border-t-3 border-retro-black bg-gray-100 flex items-center px-3 justify-between text-xs font-mono text-gray-500 select-none">
+			<div>Ln 42, Col 12</div>
+			<div>UTF-8</div>
+			<div>INS</div>
+		</footer>
+	</main>
+}

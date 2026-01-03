@@ -1,0 +1,30 @@
+package components
+
+templ PostCard(post Post) {
+	<div class="retro-card relative flex flex-col group cursor-pointer" hx-get={ post.Link } hx-push-url={ post.Link } hx-target="#content" hx-swap="innerHTML">
+		<div class="absolute -top-3 -right-3 bg-retro-pink border-2 border-retro-black px-3 py-1 rounded-full font-heading font-bold text-xs shadow-[2px_2px_0px_#000] rotate-12 z-20">#Log</div>
+		<div class="bg-gray-100 border-2 border-retro-black rounded-lg shadow-hard h-full flex flex-col p-4 pb-12 relative overflow-hidden">
+			<div class="absolute top-0 left-0 w-full h-4 border-b-2 border-retro-black flex gap-1 justify-center items-center bg-gray-300">
+				<div class="w-[2px] h-full bg-retro-black"></div>
+				<div class="w-[2px] h-full bg-retro-black"></div>
+				<div class="w-[2px] h-full bg-retro-black"></div>
+			</div>
+			<div class="mt-6 bg-white border-2 border-retro-black rounded-md p-4 flex-1 flex flex-col gap-3 relative z-10 group-hover:bg-retro-yellow/20 transition-colors">
+				<div class="w-full h-32 bg-retro-black rounded overflow-hidden border-2 border-retro-black mb-2">
+					<img alt="Cover" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsXa0NBoZl3hnGdPpvN3t-QweuCNSfskjQ2TWRmDU8V4kj9ivA_o5KmD-YBAthv6ybmWGmPUVndVI44xKF8ZgFVXHCm1raVGePEe8HD-pcAjqogBLpUvQSFp5NZsRHZfb5kBVZ8R_521jCfpI1-VWTXVk5mATHBE2SGl6ZgjastFni16iB9nPI5jZw79HNZEmeKdPDBEYUAJJiO4YcQis2xn2K5MP3Z9tH5yrX5gAoxTgrrgYAvHGRAy6dFNgwz5yYYlrDpPi7tAvR"/>
+				</div>
+				<h3 class="font-heading font-bold text-xl leading-tight uppercase line-clamp-2">{ post.Title }</h3>
+				<p class="text-xs font-body leading-tight line-clamp-3 text-gray-600">{ post.Content }</p>
+				<div class="mt-auto pt-2 flex justify-between items-center">
+					<span class="font-pixel text-xs text-gray-500">{ post.Date }</span>
+					<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+				</div>
+			</div>
+			<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-6 border-t-2 border-x-2 border-retro-black bg-gray-300 rounded-t flex justify-center items-center gap-2">
+				<div class="w-1 h-3 bg-retro-black/20 rounded-full"></div>
+				<div class="w-1 h-3 bg-retro-black/20 rounded-full"></div>
+				<div class="w-1 h-3 bg-retro-black/20 rounded-full"></div>
+			</div>
+		</div>
+	</div>
+}

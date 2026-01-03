@@ -1,0 +1,88 @@
+package views
+
+import "goth/views/components"
+
+templ Index(component templ.Component) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+			<title>Y2K Desktop</title>
+			<link href="https://fonts.googleapis.com" rel="preconnect"/>
+			<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+			<link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Gloria+Hallelujah&display=swap" rel="stylesheet"/>
+			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+			<link href="/static/css/index.css" rel="stylesheet"/>
+			<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+			<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+			<script src="/static/events.js"></script>
+			<script>
+				tailwind.config = {
+					theme: {
+						extend: {
+							colors: {
+								"desktop": "#eef2ff", // Soft lavender-ish white
+								"window": "#ffffff",
+								"retro-black": "#0f0f0f",
+								"retro-indigo": "#312e81",
+								"retro-pink": "#ffade3",
+								"retro-periwinkle": "#c7d2fe", // Pastel Periwinkle
+								"retro-blue": "#a5dcff",
+								"retro-yellow": "#fff59d",
+								"retro-green": "#bbf7d0",
+								"retro-gray": "#e2e8f0",
+								"code-bg": "#f8fafc",
+							},
+							fontFamily: {
+								"heading": ["'VT323'", "monospace"],
+								"mono": ["'Space Mono'", "monospace"],
+								"hand": ["'Gloria Hallelujah'", "cursive"],
+							},
+							borderWidth: {
+								"3": "3px",
+							},
+							boxShadow: {
+								"hard": "4px 4px 0px 0px #0f0f0f",
+								"hard-sm": "2px 2px 0px 0px #0f0f0f",
+								"hard-lg": "8px 8px 0px 0px #0f0f0f",
+								"hard-xl": "12px 12px 0px 0px #0f0f0f",
+							}
+						},
+					},
+				}
+			</script>
+		</head>
+		<body class="bg-desktop bg-dots text-retro-black font-mono h-screen overflow-x-hidden overflow-y-auto md:overflow-hidden selection:bg-retro-pink selection:text-black">
+			<div class="fixed top-12 left-12 z-0 sticker-float pointer-events-none hidden lg:block opacity-80">
+				<svg fill="none" height="80" viewBox="0 0 120 80" width="120" xmlns="http://www.w3.org/2000/svg">
+					<path d="M30 60H90V50H100V30H90V20H70V10H40V20H20V40H10V60H30Z" fill="white"></path>
+					<path d="M30 60H10V40H20V20H40V10H70V20H90V30H100V50H90V60H30ZM30 60H90" stroke="black" stroke-width="3"></path>
+				</svg>
+			</div>
+			<div class="fixed bottom-24 right-16 z-0 sticker-float-delay pointer-events-none hidden lg:block opacity-80">
+				<svg fill="none" height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="50" cy="50" fill="#fde047" r="45" stroke="black" stroke-width="3"></circle>
+					<rect fill="black" height="10" width="10" x="30" y="35"></rect>
+					<rect fill="black" height="10" width="10" x="60" y="35"></rect>
+					<path d="M30 65H70V75H30V65Z" fill="black"></path>
+				</svg>
+			</div>
+			<div class="fixed top-24 right-32 z-0 pointer-events-none hidden md:block">
+				<svg class="text-retro-pink animate-spin-slow" fill="currentColor" height="60" style="animation-duration: 10s;" viewBox="0 0 24 24" width="60">
+					<path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z" stroke="black" stroke-width="1.5"></path>
+				</svg>
+			</div>
+			<div id="layout" class="relative w-full min-h-screen md:h-full flex flex-col-reverse md:flex-row p-3 sm:p-4 md:p-8 gap-4 md:gap-6 z-10 pb-24 md:pb-8">
+				<div id="content" class="flex-1 min-h-0 flex flex-col relative">
+					if component != nil {
+						@component
+					} else {
+						@components.Home()
+					}
+				</div>
+				@components.Sidebar()
+			</div>
+		</body>
+	</html>
+}

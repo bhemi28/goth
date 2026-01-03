@@ -1,0 +1,24 @@
+package views
+
+templ NotFound() {
+	<main class="flex-1 flex flex-col items-center justify-center min-h-0 bg-retro-blue p-4">
+		<div class="bg-gray-200 border-3 border-white shadow-[4px_4px_0px_0px_#000] max-w-md w-full p-1">
+			<div class="bg-retro-indigo text-white px-2 py-1 font-heading text-xl flex justify-between items-center mb-1">
+				<span>Error 404</span>
+				<button class="w-5 h-5 bg-gray-300 text-black border border-white shadow-[1px_1px_0px_0px_#000] flex items-center justify-center text-sm leading-none active:translate-y-px active:shadow-none">x</button>
+			</div>
+			<div class="p-6 flex flex-col items-center text-center gap-4">
+				<span class="material-symbols-outlined text-6xl text-red-600">error</span>
+				<h1 class="font-heading text-3xl">FILE_NOT_FOUND</h1>
+				<p class="font-mono text-sm">
+					The requested document could not be found in the system memory. It may have been deleted, moved, or never existed.
+				</p>
+				<div class="flex gap-4 mt-4">
+					<a href="/" class="px-6 py-2 bg-gray-200 border-2 border-white shadow-[2px_2px_0px_0px_#000] active:shadow-none active:translate-y-1 font-bold font-mono text-sm hover:bg-gray-300">
+						RETURN_HOME
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+}

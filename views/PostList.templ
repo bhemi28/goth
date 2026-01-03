@@ -1,0 +1,66 @@
+package views
+
+import (
+	"fmt"
+	"goth/views/components"
+)
+
+templ PostList(posts []components.Post) {
+	<main class="flex-1 flex flex-col min-h-0 bg-window border-3 border-retro-black shadow-hard max-w-6xl mx-auto w-full relative overflow-hidden">
+		<header class="h-10 border-b-3 border-retro-black bg-retro-indigo flex items-center justify-between px-2 sm:px-3 select-none shrink-0">
+			<div class="flex items-center gap-1 sm:gap-2">
+				<div class="w-3 h-3 sm:w-4 sm:h-4 rounded-sm bg-retro-pink border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+				<div class="w-3 h-3 sm:w-4 sm:h-4 rounded-sm bg-retro-yellow border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+				<div class="w-3 h-3 sm:w-4 sm:h-4 rounded-sm bg-retro-green border-2 border-retro-black shadow-[1px_1px_0px_0px_#000]"></div>
+			</div>
+			<div class="text-white font-heading text-base sm:text-xl tracking-wider uppercase truncate px-2">File_Explorer.exe</div>
+			<div class="w-6 sm:w-8 flex justify-end shrink-0">
+				<span class="material-symbols-outlined text-white text-base sm:text-lg cursor-pointer hover:scale-110">minimize</span>
+			</div>
+		</header>
+		<div class="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-4 md:p-8 bg-gray-50 relative">
+			<div class="bg-white border-2 border-retro-black p-2 mb-6 sm:mb-8 shadow-hard-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3 sticky top-0 z-40">
+				<div class="flex items-center gap-2 min-w-0 flex-1">
+					<span class="material-symbols-outlined text-retro-indigo shrink-0">hard_drive</span>
+					<div class="font-mono text-xs sm:text-sm border-2 border-gray-300 bg-gray-100 px-2 sm:px-3 py-1 truncate min-w-0 flex-1">
+						/home/meet_bhesaniya/Desktop/BLOGS/
+					</div>
+				</div>
+				<div class="flex gap-2 shrink-0 justify-end">
+					<button class="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center border-2 border-black bg-retro-yellow shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
+						<span class="material-symbols-outlined text-xs sm:text-sm">search</span>
+					</button>
+					<button class="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
+						<span class="material-symbols-outlined text-xs sm:text-sm">filter_list</span>
+					</button>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pb-12">
+				for _, post := range posts {
+					<div class="relative group cursor-pointer mt-6" hx-get={ post.Link } hx-push-url={ post.Link } hx-target="#content" hx-swap="innerHTML">
+						<div class="absolute -top-4 left-0 w-20 sm:w-24 h-6 bg-retro-yellow border-t-3 border-l-3 border-r-3 border-retro-black rounded-t-sm z-20 group-hover:-top-6 transition-all duration-300">
+							<div class="w-full h-full bg-white/20"></div>
+						</div>
+						<div class="relative bg-retro-yellow border-3 border-retro-black p-4 sm:p-5 shadow-hard group-hover:shadow-hard-xl group-hover:-translate-y-2 transition-all duration-300 z-10 flex flex-col h-56 sm:h-64">
+							<div class="flex justify-between items-start mb-2">
+								<span class="material-symbols-outlined text-3xl sm:text-4xl opacity-50">folder_open</span>
+								<span class="font-mono text-[10px] sm:text-xs font-bold opacity-60">SIZE: 4KB</span>
+							</div>
+							<h3 class="font-heading text-xl sm:text-2xl lg:text-3xl leading-tight mb-2 group-hover:underline decoration-2 underline-offset-4 line-clamp-2">{ post.Title }</h3>
+							<p class="font-mono text-[11px] sm:text-xs leading-relaxed opacity-80 border-l-2 border-black pl-2 mt-2 line-clamp-3 flex-1">
+								{ post.Content }
+							</p>
+							<div class="flex gap-2 mt-3 flex-wrap">
+								<span class="bg-white border-2 border-black px-2 py-0.5 text-[9px] sm:text-[10px] font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] uppercase">GoLang</span>
+								<span class="bg-retro-pink border-2 border-black px-2 py-0.5 text-[9px] sm:text-[10px] font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] uppercase">Dev</span>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="text-center font-mono text-xs text-gray-400 mt-8 pb-4 border-t-2 border-dashed border-gray-300 pt-4">
+				Showing { fmt.Sprint(len(posts)) } file(s) found in /BLOGS/
+			</div>
+		</div>
+	</main>
+}
