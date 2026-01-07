@@ -2,8 +2,6 @@
 
 A retro-futuristic, Y2K-inspired portfolio and blog built with the **GOTH** stack (Go, Templ, HTMX) and Tailwind CSS.
 
-![Project Banner](static/images/pfp.webp)
-
 ## 🌐 Live Demo
 
 Check out the live version hosted on Railway:
