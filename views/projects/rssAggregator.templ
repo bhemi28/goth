@@ -1,0 +1,96 @@
+package projects
+
+templ RSSAggregator() {
+	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
+			<div class="h-32 sm:h-40 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<div class="absolute inset-0 bg-dots opacity-30"></div>
+				<span class="material-symbols-outlined text-8xl sm:text-9xl text-black/80">rss_feed</span>
+			</div>
+			<div class="p-6 sm:p-8">
+				<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 border-b-2 border-gray-100 pb-4">
+					<div>
+						<h1 class="font-heading text-3xl sm:text-4xl md:text-5xl mb-2">RSS Feed Aggregator</h1>
+						<div class="flex gap-2 flex-wrap">
+							<span class="px-3 py-1 bg-retro-yellow border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Golang</span>
+							<span class="px-3 py-1 bg-retro-blue border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">MySQL</span>
+							<span class="px-3 py-1 bg-retro-green border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">JWT Auth</span>
+						</div>
+					</div>
+					<span class="bg-retro-green px-3 py-1 border-2 border-retro-black text-xs font-bold shadow-[2px_2px_0px_0px_#000] mt-2 md:mt-0 transform -rotate-1 whitespace-nowrap">Completed</span>
+				</div>
+				
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">info</span>
+						Project Overview
+					</h2>
+					<p class="text-gray-700 leading-relaxed mb-4">
+						A backend service for ingesting, storing, and serving RSS feed data with comprehensive user authentication 
+						and subscription management. Users can subscribe to feeds, manage their reading lists, and access 
+						aggregated content through a clean REST API.
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+						Built following REST API best practices with proper authentication, data validation, and error handling. 
+						Demonstrates real-world backend development patterns and database design principles.
+					</p>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">engineering</span>
+						Technical Implementation
+					</h2>
+					<div class="space-y-4">
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">User Authentication System</h3>
+							<p class="text-sm text-gray-600">JWT-based authentication with secure password hashing, token validation, and protected routes middleware.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Feed Processing Engine</h3>
+							<p class="text-sm text-gray-600">Background workers for RSS feed parsing, content extraction, and periodic updates with duplicate detection.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Database Design</h3>
+							<p class="text-sm text-gray-600">Normalized MySQL schema for users, feeds, posts, and subscriptions with proper indexing for performance.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">lightbulb</span>
+						Key Learning Areas
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>RESTful API design with proper HTTP methods and status codes</li>
+						<li>JWT authentication implementation and middleware patterns</li>
+						<li>Background job processing and worker pool management</li>
+						<li>RSS/XML parsing and content sanitization</li>
+						<li>Database transaction management and data consistency</li>
+					</ul>
+				</section>
+
+				<div class="flex gap-4 mt-8 pt-6 border-t-2 border-gray-100">
+					<button 
+						class="bg-retro-black text-white px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-800 transition-colors shadow-[2px_2px_0px_0px_#888] disabled:opacity-50"
+						disabled
+					>
+						<span class="material-symbols-outlined text-sm mr-1">code</span>
+						View Code (Soon)
+					</button>
+					<button 
+						hx-get="/" 
+						hx-target="#content" 
+						hx-swap="innerHTML"
+						hx-push-url="true"
+						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
+						Back to Home
+					</button>
+				</div>
+			</div>
+		</article>
+	</main>
+}

@@ -1,0 +1,146 @@
+package projects
+
+templ Scouts() {
+	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
+			<div class="h-32 sm:h-40 bg-retro-green border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<div class="absolute inset-0 bg-dots opacity-30"></div>
+				<span class="material-symbols-outlined text-8xl sm:text-9xl text-black/80">groups</span>
+			</div>
+			<div class="p-6 sm:p-8">
+				<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 border-b-2 border-gray-100 pb-4">
+					<div>
+						<h1 class="font-heading text-3xl sm:text-4xl md:text-5xl mb-2">Scouts Canada Portal</h1>
+						<div class="flex gap-2 flex-wrap">
+							<span class="px-3 py-1 bg-retro-yellow border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Node.js</span>
+							<span class="px-3 py-1 bg-retro-blue border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">MongoDB</span>
+							<span class="px-3 py-1 bg-retro-green border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Express.js</span>
+							<span class="px-3 py-1 bg-retro-pink border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">JWT Auth</span>
+						</div>
+					</div>
+					<span class="bg-retro-green px-3 py-1 border-2 border-retro-black text-xs font-bold shadow-[2px_2px_0px_0px_#000] mt-2 md:mt-0 transform -rotate-1 whitespace-nowrap">Production</span>
+				</div>
+				
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">info</span>
+						Project Overview
+					</h2>
+					<p class="text-gray-700 leading-relaxed mb-4">
+						A comprehensive admin panel built for Scouts Canada to manage group leaders, member groups, seasonal 
+						fundraising campaigns, and product catalogs. The system streamlined their fundraising workflow with 
+						order management and tracking capabilities, replacing manual processes with an automated digital solution.
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+						On this backend-heavy project, I took ownership of most API development tasks while my teammate focused 
+						on higher-priority initiatives. Collaborated closely with the Shopify UI team and provided comprehensive 
+						post-launch support for production issues.
+					</p>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">engineering</span>
+						Technical Implementation
+					</h2>
+					<div class="space-y-4">
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">MongoDB Schema Design</h3>
+							<p class="text-sm text-gray-600">Designed complex relational models within MongoDB linking groups, leaders, campaigns, and products with proper indexing for performance optimization.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Dynamic Aggregation Pipelines</h3>
+							<p class="text-sm text-gray-600">Built complex MongoDB aggregation pipelines for listing groups/products with dynamic filters, search functionality, and efficient sorting mechanisms.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">API Architecture & Validation</h3>
+							<p class="text-sm text-gray-600">Developed robust REST APIs with comprehensive field validation, data consistency checks, and proper error handling for production reliability.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Fundraising Campaign Management</h3>
+							<p class="text-sm text-gray-600">Implemented campaign lifecycle management with state transitions, order tracking, and automated workflow processes for seasonal fundraising cycles.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">group</span>
+						Team & Collaboration
+					</h2>
+					<div class="bg-retro-gray/20 border-2 border-retro-black p-4 rounded">
+						<p class="text-sm text-gray-700 mb-3">
+							<strong>Team Structure:</strong> 6-member cross-functional team
+						</p>
+						<ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+							<li><strong>Backend Team:</strong> 2 developers (primary contributor while teammate handled other priorities)</li>
+							<li><strong>Frontend Team:</strong> 1 React developer</li>
+							<li><strong>Shopify UI Team:</strong> Dedicated team for Shopify integration</li>
+							<li><strong>Support:</strong> QA engineer and Project Manager</li>
+						</ul>
+						<p class="text-sm text-gray-700 mt-3">
+							<strong>My Role:</strong> Primary contributor responsible for API design, database optimization, 
+							and post-launch production support, taking ownership of most backend development tasks.
+						</p>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">lightbulb</span>
+						Key Learning Areas
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>Advanced MongoDB aggregation pipeline optimization for complex queries</li>
+						<li>Production API performance tuning and database indexing strategies</li>
+						<li>Cross-team collaboration between backend, frontend, and external Shopify teams</li>
+						<li>Post-launch support and incident response in production environments</li>
+						<li>Taking ownership of critical backend components while managing competing priorities</li>
+						<li>Data consistency management across multi-step fundraising workflows</li>
+					</ul>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">military_tech</span>
+						Key Achievements
+					</h2>
+					<div class="space-y-3">
+						<div class="bg-retro-yellow/20 border-l-4 border-retro-yellow p-3">
+							<p class="text-sm font-semibold text-gray-800">Production Performance</p>
+							<p class="text-xs text-gray-600">Improved API response times through optimized aggregation pipelines and strategic indexing</p>
+						</div>
+						<div class="bg-retro-green/20 border-l-4 border-retro-green p-3">
+							<p class="text-sm font-semibold text-gray-800">System Reliability</p>
+							<p class="text-xs text-gray-600">Delivered stable backend infrastructure used by Scouts Canada staff in production</p>
+						</div>
+						<div class="bg-retro-blue/20 border-l-4 border-retro-blue p-3">
+							<p class="text-sm font-semibold text-gray-800">Ownership & Responsibility</p>
+							<p class="text-xs text-gray-600">Took ownership of majority of backend development tasks, ensuring project continuity and quality</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="flex gap-4 mt-8 pt-6 border-t-2 border-gray-100">
+					<button 
+						class="bg-retro-black text-white px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-800 transition-colors shadow-[2px_2px_0px_0px_#888] disabled:opacity-50"
+						disabled
+					>
+						<span class="material-symbols-outlined text-sm mr-1">security</span>
+						Confidential
+					</button>
+					<button 
+						hx-get="/" 
+						hx-target="#content" 
+						hx-swap="innerHTML"
+						hx-push-url="true"
+						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
+						Back to Home
+					</button>
+				</div>
+			</div>
+		</article>
+	</main>
+}

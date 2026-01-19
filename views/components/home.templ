@@ -66,24 +66,44 @@ templ Home() {
 				<h2 class="font-heading text-2xl sm:text-3xl">PROJECTS</h2>
 			</div>
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="#" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
-					<div class="h-24 sm:h-28 bg-retro-yellow border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<!-- Professional/Workplace Projects -->
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="/projects/scouts" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
+					<div class="h-24 sm:h-28 bg-retro-green border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
 						<div class="absolute inset-0 bg-dots opacity-30"></div>
-						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">shopping_cart</span>
+						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">groups</span>
+						<div class="absolute top-2 right-2 bg-retro-yellow border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-12">WORK</div>
 					</div>
 					<div class="p-4 sm:p-5 flex-1 flex flex-col">
-						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">Product Price Tracker</h3>
-						<p class="text-[11px] sm:text-xs text-gray-600 mb-3 sm:mb-4 flex-1 leading-relaxed">Building a backend service for tracking price/availability changes across e-commerce platforms with periodic ingestion.</p>
+						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">Scouts Canada Portal</h3>
+						<p class="text-[11px] sm:text-xs text-gray-600 mb-3 sm:mb-4 flex-1 leading-relaxed">Built comprehensive admin panel for managing fundraising campaigns, group leaders, and product catalogs with complex MongoDB aggregations.</p>
 						<div class="flex gap-2 flex-wrap mt-auto">
-							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">Golang</span>
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">Node.js</span>
 							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">MongoDB</span>
 						</div>
 					</div>
 				</div>
-				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="#" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="/projects/show-engine" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
+					<div class="h-24 sm:h-28 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+						<div class="absolute inset-0 bg-dots opacity-30"></div>
+						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">event</span>
+						<div class="absolute top-2 right-2 bg-retro-yellow border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-12">WORK</div>
+					</div>
+					<div class="p-4 sm:p-5 flex-1 flex flex-col">
+						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">ShowEngine Platform</h3>
+						<p class="text-[11px] sm:text-xs text-gray-600 mb-3 sm:mb-4 flex-1 leading-relaxed">Event asset selection platform with AI-powered image categorization, queue-based upload processing, and comprehensive workflow management.</p>
+						<div class="flex gap-2 flex-wrap mt-auto">
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">Node.js</span>
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">AWS S3</span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Personal Projects -->
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="/projects/rss-aggregator" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
 					<div class="h-24 sm:h-28 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
 						<div class="absolute inset-0 bg-dots opacity-30"></div>
 						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">rss_feed</span>
+						<div class="absolute top-2 right-2 bg-retro-pink border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-12">PERSONAL</div>
 					</div>
 					<div class="p-4 sm:p-5 flex-1 flex flex-col">
 						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">RSS Feed Aggregator</h3>
@@ -94,10 +114,26 @@ templ Home() {
 						</div>
 					</div>
 				</div>
-				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="#" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="/projects/price-tracker" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
+					<div class="h-24 sm:h-28 bg-retro-yellow border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+						<div class="absolute inset-0 bg-dots opacity-30"></div>
+						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">shopping_cart</span>
+						<div class="absolute top-2 right-2 bg-retro-pink border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-12">PERSONAL</div>
+					</div>
+					<div class="p-4 sm:p-5 flex-1 flex flex-col">
+						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">Product Price Tracker</h3>
+						<p class="text-[11px] sm:text-xs text-gray-600 mb-3 sm:mb-4 flex-1 leading-relaxed">Building a backend service for tracking price/availability changes across e-commerce platforms with periodic ingestion.</p>
+						<div class="flex gap-2 flex-wrap mt-auto">
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">Golang</span>
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">MongoDB</span>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="/projects/tui-logger" hx-push-url="true" hx-target="#content" hx-swap="innerHTML">
 					<div class="h-24 sm:h-28 bg-retro-green border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
 						<div class="absolute inset-0 bg-dots opacity-30"></div>
 						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">terminal</span>
+						<div class="absolute top-2 right-2 bg-retro-pink border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-12">PERSONAL</div>
 					</div>
 					<div class="p-4 sm:p-5 flex-1 flex flex-col">
 						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">Go TUI Logger</h3>

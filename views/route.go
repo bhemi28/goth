@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"goth/views/components"
+	"goth/views/projects"
 	"io"
 	"io/fs"
 	"log"
@@ -33,6 +34,13 @@ func RegisterRoutes(r *chi.Mux) {
 	r.Get("/posts/{name}", getPostFromName)
 	r.Get("/contact", getContactSection)
 	r.Post("/contact/send", sendMailHandler)
+
+	// Project routes
+	r.Get("/projects/scouts", renderScouts)
+	r.Get("/projects/show-engine", renderShowEngine)
+	r.Get("/projects/price-tracker", renderPriceTracker)
+	r.Get("/projects/rss-aggregator", renderRSSAggregator)
+	r.Get("/projects/tui-logger", renderTUILogger)
 
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
@@ -192,6 +200,26 @@ func sendMailHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Render success component
 	ContactSuccess().Render(context.Background(), w)
+}
+
+func renderScouts(w http.ResponseWriter, r *http.Request) {
+	renderWithLayout(w, r, projects.Scouts())
+}
+
+func renderShowEngine(w http.ResponseWriter, r *http.Request) {
+	renderWithLayout(w, r, projects.ShowEngine())
+}
+
+func renderPriceTracker(w http.ResponseWriter, r *http.Request) {
+	renderWithLayout(w, r, projects.PriceTracker())
+}
+
+func renderRSSAggregator(w http.ResponseWriter, r *http.Request) {
+	renderWithLayout(w, r, projects.RSSAggregator())
+}
+
+func renderTUILogger(w http.ResponseWriter, r *http.Request) {
+	renderWithLayout(w, r, projects.TUILogger())
 }
 
 func Unsafe(html string) templ.Component {
