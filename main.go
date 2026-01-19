@@ -4,16 +4,13 @@ import (
 	"goth/views"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found")
-	}
 
 	router := chi.NewRouter()
 
@@ -22,8 +19,14 @@ func main() {
 	router.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	views.RegisterRoutes(router)
 
-	log.Println("Starting server on :8080")
-	if err := http.ListenAndServe(":8080", router); err != nil {
+	// Get port from environment or default to 8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	log.Println("Starting server on :" + port)
+	if err := http.ListenAndServe(":"+port, router); err != nil {
 		panic(err)
 	}
 

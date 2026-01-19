@@ -27,6 +27,6 @@ COPY --from=build /app/server /app/server
 COPY --from=build /app/static /app/static
 COPY --from=build /app/views /app/views
 COPY --from=build /app/posts /app/posts
-EXPOSE 8080
+
 USER nonroot:nonroot
 ENTRYPOINT ["/app/server"]
