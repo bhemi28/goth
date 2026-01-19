@@ -1,0 +1,92 @@
+
+	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
+			<div class="h-32 sm:h-40 bg-retro-green border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<div class="absolute inset-0 bg-dots opacity-30"></div>
+				<span class="material-symbols-outlined text-8xl sm:text-9xl text-black/80">terminal</span>
+			</div>
+			<div class="p-6 sm:p-8">
+				<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 border-b-2 border-gray-100 pb-4">
+					<div>
+						<h1 class="font-heading text-3xl sm:text-4xl md:text-5xl mb-2">Go TUI Logger</h1>
+						<div class="flex gap-2 flex-wrap">
+							<span class="px-3 py-1 bg-retro-yellow border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Golang</span>
+							<span class="px-3 py-1 bg-retro-blue border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">TUI</span>
+							<span class="px-3 py-1 bg-retro-green border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Bubble Tea</span>
+						</div>
+					</div>
+					<span class="bg-retro-pink px-3 py-1 border-2 border-retro-black text-xs font-bold shadow-[2px_2px_0px_0px_#000] mt-2 md:mt-0 transform -rotate-1 whitespace-nowrap">In Progress</span>
+				</div>
+				
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">info</span>
+						Project Overview
+					</h2>
+					<p class="text-gray-700 leading-relaxed mb-4">
+						A terminal-based application for daily activity tracking and logging. Built to explore Go's TUI ecosystem, 
+						focusing on creating intuitive command-line interfaces with proper state management and responsive user experience.
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+						This project serves as a practical exploration of terminal user interface patterns, keyboard navigation, 
+						and building desktop-class applications that run entirely in the terminal environment.
+					</p>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">engineering</span>
+						Technical Implementation
+					</h2>
+					<div class="space-y-4">
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Bubble Tea Framework</h3>
+							<p class="text-sm text-gray-600">Model-View-Update architecture for building interactive terminal applications with proper component separation.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">State Management</h3>
+							<p class="text-sm text-gray-600">Centralized application state with proper message passing and update cycles for responsive user interaction.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Terminal UX Design</h3>
+							<p class="text-sm text-gray-600">Keyboard navigation, visual feedback, and terminal-native interaction patterns for seamless user experience.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">lightbulb</span>
+						Key Learning Areas
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>Terminal user interface design principles and best practices</li>
+						<li>Event-driven programming with the Elm architecture pattern</li>
+						<li>Building responsive applications without traditional GUI frameworks</li>
+						<li>Keyboard-first navigation and accessibility considerations</li>
+						<li>Cross-platform terminal compatibility and ANSI escape sequences</li>
+					</ul>
+				</section>
+
+				<div class="flex gap-4 mt-8 pt-6 border-t-2 border-gray-100">
+					<button 
+						class="bg-retro-black text-white px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-800 transition-colors shadow-[2px_2px_0px_0px_#888] disabled:opacity-50"
+						disabled
+					>
+						<span class="material-symbols-outlined text-sm mr-1">code</span>
+						View Code (Soon)
+					</button>
+					<button 
+						hx-get="partials/home.html" 
+						hx-target="#content" 
+						hx-swap="innerHTML"
+						
+						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
+						Back to Home
+					</button>
+				</div>
+			</div>
+		</article>
+	</main>

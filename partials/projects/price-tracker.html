@@ -1,0 +1,93 @@
+
+	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
+			<div class="h-32 sm:h-40 bg-retro-yellow border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<div class="absolute inset-0 bg-dots opacity-30"></div>
+				<span class="material-symbols-outlined text-8xl sm:text-9xl text-black/80">shopping_cart</span>
+			</div>
+			<div class="p-6 sm:p-8">
+				<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 border-b-2 border-gray-100 pb-4">
+					<div>
+						<h1 class="font-heading text-3xl sm:text-4xl md:text-5xl mb-2">Product Price Tracker</h1>
+						<div class="flex gap-2 flex-wrap">
+							<span class="px-3 py-1 bg-retro-yellow border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Golang</span>
+							<span class="px-3 py-1 bg-retro-blue border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">MongoDB</span>
+							<span class="px-3 py-1 bg-retro-green border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">REST API</span>
+						</div>
+					</div>
+					<span class="bg-retro-pink px-3 py-1 border-2 border-retro-black text-xs font-bold shadow-[2px_2px_0px_0px_#000] mt-2 md:mt-0 transform -rotate-1 whitespace-nowrap">In Development</span>
+				</div>
+				
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">info</span>
+						Project Overview
+					</h2>
+					<p class="text-gray-700 leading-relaxed mb-4">
+						A backend service designed to track price and availability changes across multiple e-commerce platforms. 
+						The system performs periodic data ingestion, stores historical pricing data, and provides APIs for querying 
+						price trends and availability status.
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+						Built with Go for high-performance concurrent processing and MongoDB for flexible document storage 
+						of product data with varying schemas across different platforms.
+					</p>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">engineering</span>
+						Technical Implementation
+					</h2>
+					<div class="space-y-4">
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Data Ingestion Pipeline</h3>
+							<p class="text-sm text-gray-600">Concurrent workers scraping product data with configurable intervals, rate limiting, and retry mechanisms for handling platform-specific challenges.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Price Change Detection</h3>
+							<p class="text-sm text-gray-600">Algorithm for detecting meaningful price changes while filtering noise, with configurable thresholds and trend analysis.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">REST API Layer</h3>
+							<p class="text-sm text-gray-600">Clean API endpoints for product search, price history, and real-time availability with proper pagination and filtering.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">lightbulb</span>
+						Key Learning Areas
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>Concurrent programming patterns in Go for efficient data processing</li>
+						<li>MongoDB document design for time-series pricing data</li>
+						<li>Rate limiting and respectful web scraping practices</li>
+						<li>Building resilient systems with proper error handling and retries</li>
+						<li>API design for data-heavy applications with pagination strategies</li>
+					</ul>
+				</section>
+
+				<div class="flex gap-4 mt-8 pt-6 border-t-2 border-gray-100">
+					<button 
+						class="bg-retro-black text-white px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-800 transition-colors shadow-[2px_2px_0px_0px_#888] disabled:opacity-50"
+						disabled
+					>
+						<span class="material-symbols-outlined text-sm mr-1">code</span>
+						View Code (Soon)
+					</button>
+					<button 
+						hx-get="partials/home.html" 
+						hx-target="#content" 
+						hx-swap="innerHTML"
+						
+						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
+						Back to Home
+					</button>
+				</div>
+			</div>
+		</article>
+	</main>
