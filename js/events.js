@@ -30,10 +30,10 @@ document.addEventListener('htmx:afterRequest', function(evt) {
 });
 
 // Email Copy Functionality
-function copyEmail() {
-    navigator.clipboard.writeText("meet.bhesaniya.prof@gmail.com").then(() => {
+function copyToClipboard(text, element) {
+    navigator.clipboard.writeText(text).then(function() {
         const popup = document.createElement("div");
-        popup.textContent = "Email Copied!";
+        popup.textContent = "Copied to clipboard!";
         popup.style.position = "fixed";
         popup.style.bottom = "20px";
         popup.style.right = "20px";
@@ -45,8 +45,11 @@ function copyEmail() {
         popup.style.boxShadow = "4px 4px 0px 0px #0f0f0f";
         popup.style.zIndex = "1000";
         document.body.appendChild(popup);
+
         setTimeout(() => {
             popup.remove();
         }, 2000);
+    }, function(err) {
+        console.error('Could not copy text: ', err);
     });
 }
