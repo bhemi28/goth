@@ -1,0 +1,107 @@
+<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
+			<div class="h-32 sm:h-40 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+				<div class="absolute inset-0 bg-dots opacity-30"></div>
+				<span class="material-symbols-outlined text-8xl sm:text-9xl text-black/80">dashboard</span>
+			</div>
+			<div class="p-6 sm:p-8">
+				<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6 border-b-2 border-gray-100 pb-4">
+					<div>
+						<h1 class="font-heading text-3xl sm:text-4xl md:text-5xl mb-2">Tracker OS</h1>
+						<div class="flex gap-2 flex-wrap">
+							<span class="px-3 py-1 bg-retro-yellow border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">React</span>
+							<span class="px-3 py-1 bg-retro-pink border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">NestJS</span>
+							<span class="px-3 py-1 bg-retro-green border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">MongoDB</span>
+                            <span class="px-3 py-1 bg-retro-periwinkle border-2 border-black text-sm font-bold shadow-[2px_2px_0px_0px_#000]">Docker</span>
+						</div>
+					</div>
+					<span class="bg-retro-pink px-3 py-1 border-2 border-retro-black text-xs font-bold shadow-[2px_2px_0px_0px_#000] mt-2 md:mt-0 transform -rotate-1 whitespace-nowrap">In Progress</span>
+				</div>
+				
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">info</span>
+						Project Overview
+					</h2>
+					<p class="text-gray-700 leading-relaxed mb-4">
+						"Tracker OS" is a comprehensive job application tracker built to replace cumbersome spreadsheets. It offers a high-density dashboard to efficiently view, manage, and track applications through the entire hiring pipeline—from initial application to the final offer.
+					</p>
+					<p class="text-gray-700 leading-relaxed">
+						The core goal is to create a "sheet killer" for job seekers, providing a superior user experience with features like quick-add forms, status tracking, and persistent storage.
+					</p>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">engineering</span>
+						Technical Implementation
+					</h2>
+					<div class="space-y-4">
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Full-Stack Architecture</h3>
+							<p class="text-sm text-gray-600">Built with a <span class="font-bold">React</span> frontend and a <span class="font-bold">NestJS</span> backend, ensuring a scalable and maintainable codebase.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">State Management & Forms</h3>
+							<p class="text-sm text-gray-600">Leverages <span class="font-bold">Redux Toolkit (RTK Query)</span> for efficient data fetching and caching, and <span class="font-bold">React Hook Form</span> for robust form handling.</p>
+						</div>
+						<div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">Database & Persistence</h3>
+							<p class="text-sm text-gray-600">Uses <span class="font-bold">MongoDB</span> with Mongoose for flexible data storage, all running inside a <span class="font-bold">Docker</span> container with volumes for data persistence.</p>
+						</div>
+                        <div class="bg-gray-50 border-2 border-gray-200 p-4 rounded">
+							<h3 class="font-bold text-lg mb-2">User Experience</h3>
+							<p class="text-sm text-gray-600">Features include a dynamic dashboard with both table and tile views, a quick-add modal for new applications, and instant search/filtering capabilities.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">lightbulb</span>
+						Key Learning Areas
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>Implementing a full-stack application as a solo developer.</li>
+						<li>Combining NestJS backend principles with a feature-rich React frontend.</li>
+						<li>Advanced client-side state management and data fetching with Redux Toolkit.</li>
+						<li>Containerizing a full-stack application using Docker for development and deployment.</li>
+						<li>Designing and building a multi-feature SaaS product from the ground up.</li>
+					</ul>
+				</section>
+
+                <section class="mb-8">
+					<h2 class="font-heading text-2xl mb-4 flex items-center gap-2">
+						<span class="material-symbols-outlined">rocket_launch</span>
+						Future Scope
+					</h2>
+					<ul class="list-disc list-inside space-y-2 text-gray-700">
+						<li>User authentication with OAuth2/JWT.</li>
+						<li>A Kanban board view for visual pipeline management.</li>
+						<li>Calendar integration for interview scheduling.</li>
+						<li>Automated notification cycles for application follow-ups.</li>
+					</ul>
+				</section>
+
+				<div class="flex gap-4 mt-8 pt-6 border-t-2 border-gray-100">
+					<a 
+						href="https://github.com/bhemi28/trackerOs"
+						target="_blank"
+						class="bg-retro-green text-retro-black px-4 py-2 border-2 border-retro-black font-bold transition-all shadow-hard-sm hover:shadow-hard-lg hover:-translate-y-1 hover:-translate-x-1 flex items-center"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">code</span>
+						View Code
+					</a>
+					<button 
+						hx-get="partials/home.html" 
+						hx-target="#content" 
+						hx-swap="innerHTML"
+						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
+					>
+						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
+						Back to Home
+					</button>
+				</div>
+			</div>
+		</article>
+	</main>

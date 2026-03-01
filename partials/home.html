@@ -1,5 +1,4 @@
-
-	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-5xl mx-auto px-2 sm:px-4">
+<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-5xl mx-auto px-2 sm:px-4">
 		<div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-8 md:mb-12">
 			<div class="relative shrink-0 group">
 				<div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-3 border-retro-black overflow-hidden shadow-hard bg-retro-yellow relative z-10">
@@ -64,6 +63,25 @@
 				<h2 class="font-heading text-2xl sm:text-3xl">PROJECTS</h2>
 			</div>
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+				<!-- Tracker OS Project -->
+				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="partials/projects/tracker-os.html" hx-target="#content" hx-swap="innerHTML">
+					<div class="h-24 sm:h-28 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
+						<div class="absolute inset-0 bg-dots opacity-30"></div>
+						<span class="material-symbols-outlined text-5xl sm:text-6xl text-black/80 group-hover:scale-110 transition-transform">dashboard</span>
+						<div class="absolute top-2 right-2 flex flex-col gap-1">
+							<div class="bg-retro-pink border border-black px-1 py-0.5 text-[8px] font-bold transform rotate-6">PERSONAL</div>
+							<div class="bg-retro-yellow border border-black px-1 py-0.5 text-[8px] font-bold transform -rotate-6">LATEST</div>
+						</div>
+					</div>
+					<div class="p-4 sm:p-5 flex-1 flex flex-col">
+						<h3 class="font-heading text-xl sm:text-2xl mb-2 group-hover:underline decoration-retro-pink decoration-4">Tracker OS</h3>
+						<p class="text-[11px] sm:text-xs text-gray-600 mb-3 sm:mb-4 flex-1 leading-relaxed">A "sheet killer" for job seekers to manage applications, built with React, NestJS, and MongoDB.</p>
+						<div class="flex gap-2 flex-wrap mt-auto">
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">React</span>
+							<span class="text-[9px] sm:text-[10px] font-bold border border-black px-1 py-0.5 bg-gray-50 shadow-[1px_1px_0px_0px_#ccc]">NestJS</span>
+						</div>
+					</div>
+				</div>
 				<!-- Professional/Workplace Projects -->
 				<div class="bg-white border-3 border-retro-black p-0 shadow-hard flex flex-col h-full hover:shadow-hard-lg transition-all cursor-pointer group relative overflow-hidden" hx-get="partials/projects/scouts.html"  hx-target="#content" hx-swap="innerHTML">
 					<div class="h-24 sm:h-28 bg-retro-green border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
