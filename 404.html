@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Not Found</title>
+    <title>404 - Redirecting...</title>
+    
+    <script>
+        (function() {
+            // 1. Get the path they were trying to visit
+            var path = window.location.pathname;
+            
+            // 2. Redirect back to root. 
+            // We use .replace so the 404 page doesn't stay in their back-button history.
+            // If you want to keep it simple, just use "/"
+            window.location.replace("/goth/");
+        })();
+    </script>
+
     <style>
         body {
             background-color: #eef2ff;
@@ -41,21 +54,14 @@
             box-shadow: 4px 4px 0px 0px #0f0f0f;
             transition: transform 0.1s;
         }
-        a:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px 0px #0f0f0f;
-        }
-        a:active {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px 0px #0f0f0f;
-        }
+        /* ... existing styles ... */
     </style>
 </head>
 <body>
     <div class="container">
         <h1>404</h1>
-        <p>Page Not Found</p>
-        <a href="/index.html">Return to Safety</a>
+        <p>Redirecting you home...</p>
+        <a href="/">Return to Safety</a>
     </div>
 </body>
 </html>

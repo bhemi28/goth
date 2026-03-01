@@ -1,5 +1,5 @@
 // HTMX Loading State for Contact Form
-document.addEventListener('htmx:beforeRequest', function(evt) {
+document.addEventListener('htmx:beforeRequest', function (evt) {
     var form = evt.detail.elt;
     if (form.id === 'contact-form') {
         var btn = document.getElementById('submit-btn');
@@ -14,7 +14,7 @@ document.addEventListener('htmx:beforeRequest', function(evt) {
     }
 });
 
-document.addEventListener('htmx:afterRequest', function(evt) {
+document.addEventListener('htmx:afterRequest', function (evt) {
     var form = evt.detail.elt;
     if (form.id === 'contact-form') {
         var btn = document.getElementById('submit-btn');
@@ -31,7 +31,7 @@ document.addEventListener('htmx:afterRequest', function(evt) {
 
 // Email Copy Functionality
 function copyToClipboard(text, element) {
-    navigator.clipboard.writeText(text).then(function() {
+    navigator.clipboard.writeText(text).then(function () {
         const popup = document.createElement("div");
         popup.textContent = "Copied to clipboard!";
         popup.style.position = "fixed";
@@ -49,7 +49,7 @@ function copyToClipboard(text, element) {
         setTimeout(() => {
             popup.remove();
         }, 2000);
-    }, function(err) {
+    }, function (err) {
         console.error('Could not copy text: ', err);
     });
 }

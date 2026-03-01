@@ -1,5 +1,4 @@
-
-	<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
+<main class="flex-1 h-full overflow-y-auto overflow-x-hidden w-full max-w-4xl mx-auto px-2 sm:px-4">
 		<article class="bg-white border-3 border-retro-black shadow-hard rounded-lg overflow-hidden mb-8">
 			<div class="h-32 sm:h-40 bg-retro-blue border-b-3 border-retro-black flex items-center justify-center relative overflow-hidden">
 				<div class="absolute inset-0 bg-dots opacity-30"></div>
@@ -81,7 +80,8 @@
 						hx-get="partials/home.html" 
 						hx-target="#content" 
 						hx-swap="innerHTML"
-						
+						hx-push-url="/goth/"
+						hx-on::after-request="window.scrollTo(0,0)"
 						class="bg-white text-retro-black px-4 py-2 border-2 border-retro-black font-bold hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_#ccc]"
 					>
 						<span class="material-symbols-outlined text-sm mr-1">arrow_back</span>
